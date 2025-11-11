@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Secure Materials — Aurora Theatre</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aurora Theatre</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button id="nav-toggle-6" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section-head">
+      <h1>Protected Documents</h1>
+      <p>Access rehearsal and production materials below. Enter the correct password to unlock.</p>
+    </section>
+
+    <div class="card form-card">
+      <label for="secure-password">
+        Enter password
+        <input id="secure-password" type="password" placeholder="Password">
+      </label>
+      <button id="secure-check" class="btn primary">Open</button>
+
+      <div id="secure-area" hidden>
+        <h2>Production Files</h2>
+        <ul>
+          <li><a href="downloads/cast_packet_nov.pdf" target="_blank">Cast Packet — Nov</a></li>
+          <li><a href="downloads/tech_plan_nov.pdf" target="_blank">Tech Plan — Nov</a></li>
+        </ul>
+
+        <h3>Archive</h3>
+        <ul>
+          <li><a href="downloads/archive_oct.pdf" target="_blank">October Archive</a></li>
+        </ul>
+
+        <button id="logout-btn" class="btn small">Logout</button>
+      </div>
+
+      <p class="muted">Note: This is client-side demo security. Use server-side auth for real protection.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>Aurora Theatre Company</strong>
+      </div>
+      <div class="col">
+        <small>© <span id="year-6"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/secure.js"></script>
+</body>
+</html>
+
+

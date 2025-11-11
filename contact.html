@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Aurora Theatre</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aurora Theatre</a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="productions.html">Productions</a>
+        <a href="calendar.html">Calendar</a>
+      </nav>
+      <button id="nav-toggle-5" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <section class="section-head">
+      <h1>Contact & Submissions</h1>
+      <p>Reach management, submit your artist bio, or share creative materials.</p>
+    </section>
+
+    <div class="contact-layout">
+      <!-- LEFT COLUMN -->
+      <div class="contact-left">
+        <!-- Contact form -->
+        <h2>Management Contact</h2>
+        <form id="contact-form" class="form-card" aria-label="Contact form">
+          <label>
+            Your name
+            <input required name="name" id="contact-name" type="text" placeholder="Full name">
+          </label>
+          <label>
+            Email
+            <input required name="email" id="contact-email" type="email" placeholder="you@example.com">
+          </label>
+          <label>
+            Message
+            <textarea required name="message" id="contact-message" rows="5" placeholder="Tell us about your enquiry"></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send message</button>
+        </form>
+
+        <!-- Bio submission -->
+        <h2 id="bio-form">Submit a Bio</h2>
+        <form id="bio-form-el" class="form-card">
+          <label>
+            Name
+            <input required id="bio-name" name="name" type="text">
+          </label>
+          <label>
+            Short bio (100–400 chars)
+            <textarea required id="bio-text" name="bio" maxlength="400"></textarea>
+          </label>
+          <label>
+            Sample link (optional)
+            <input id="bio-link" name="link" type="url" placeholder="https://">
+          </label>
+          <button class="btn primary" type="submit">Submit bio</button>
+        </form>
+
+        <!-- Sharing Section -->
+        <section class="sharing-section">
+          <h2 class="section-title">Sharing Section</h2>
+          <p class="section-desc">
+            Upload or explore creative process materials shared by our team and contributors.
+          </p>
+
+          <div class="share-actions">
+            <p>
+              <strong>How to contribute:</strong><br>
+              Click below to open our shared folder and add your creative files.
+            </p>
+            <a 
+              href="https://drive.google.com/drive/folders/1nsu7Gb13zl8UvCOGNFdopALZiiqGaTf8"
+              target="_blank"
+              class="btn primary">
+              Open Shared Folder
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="contact-right">
+        <h3>Contact Sheet</h3>
+        <table class="contact-sheet" id="contact-sheet" aria-label="Contact sheet">
+          <thead>
+            <tr><th>Name</th><th>Role</th><th>Email</th><th>Phone</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Jordan Kim</td><td>Artistic Director</td><td>jordan@aurora.example</td><td>+1 416 555 0101</td></tr>
+            <tr><td>Sana Patel</td><td>Producer</td><td>sana@aurora.example</td><td>+1 416 555 0102</td></tr>
+            <tr><td>Box Office</td><td>Box Office</td><td>tickets@aurora.example</td><td>+1 416 555 0110</td></tr>
+          </tbody>
+        </table>
+        <a id="download-contacts" class="btn small">Download CSV</a>
+
+        <h3 id="downloads">Downloads</h3>
+        <ul class="downloads-list">
+          <li><a href="downloads/risk_release.pdf" download>Risk & Release (PDF)</a></li>
+          <li><a href="downloads/photo_release.pdf" download>Photo Release (PDF)</a></li>
+        </ul>
+
+        <h3>Location</h3>
+        <div class="map-embed">
+          <iframe
+            title="Theatre location"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-79.387%2C43.648%2C-79.377%2C43.658&amp;layer=mapnik&amp;marker=43.653%2C-79.381"
+            style="border:0;width:100%;height:220px;border-radius:var(--radius);">
+          </iframe>
+          <p class="muted" style="text-align:center;margin-top:6px;">Downtown Toronto</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col"><strong>Aurora Theatre Company</strong></div>
+      <div class="col">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="calendar.html">Calendar</a>
+        </nav>
+      </div>
+      <div class="col">
+        <small>© <span id="year-5"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+

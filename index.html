@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora Theatre Company</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 3h20v3H2zM6 9h2v12H6zM10 9h2v12h-2zM14 9h2v12h-2z"/></svg>
+        <span>Aurora Theatre</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="about.html">About</a>
+        <a href="productions.html">Productions</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact</a>
+        <a href="secure.html" class="secondary">Secure</a>
+      </nav>
+
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Bold theatre. Intimate stories.</h1>
+          <p class="tagline">New works • Workshops • Community Programs</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="productions.html">See productions</a>
+            <a class="btn ghost" href="calendar.html">View calendar</a>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <!-- decorative SVG / placeholder image -->
+          <svg viewBox="0 0 600 400" class="hero-graphic" role="img" aria-label="Abstract stage shape">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#2b0a0a" stop-opacity="0.9"/>
+                <stop offset="1" stop-color="#4b0c2b" stop-opacity="0.9"/>
+              </linearGradient>
+            </defs>
+            <rect rx="18" width="100%" height="100%" fill="url(#g)"/>
+            <g fill="none" stroke="#f2d8c9" stroke-width="3" opacity="0.7">
+              <path d="M80 80 C180 20, 420 20, 520 80"/>
+              <path d="M80 320 C180 380, 420 380, 520 320"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="container announcements">
+      <div class="section-head">
+        <h2>Announcements & Call Board</h2>
+        <p>Latest updates for casts, crew, and patrons.</p>
+      </div>
+
+      <div class="announcements-grid">
+        <div class="announcements-list" id="announcements">
+          <!-- JS will populate announcements -->
+        </div>
+
+        <aside class="callboard">
+          <h3>Call Board</h3>
+          <ul id="callboard-list">
+            <!-- JS populates callboard -->
+          </ul>
+          <a class="btn small" id="new-ann-btn">Add quick note</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container highlights">
+      <h2>Featured Production</h2>
+      <div class="card featured">
+        <div class="card-media">
+          <div class="poster-placeholder" >
+          </div>
+        </div>
+        <div class="card-body">
+          <h3>Echoes in the Atrium</h3>
+          <p>By L. Rivera — a gripping new play about memory, home, and small acts of courage.</p>
+          <div class="meta-row">
+            <span>Runs Nov 20 – Dec 13</span>
+            <span class="dot">•</span>
+            <span>Tickets &mdash; 40 CAD</span>
+          </div>
+          <a href="productions.html" class="btn primary">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container small-grid">
+      <div class="card">
+        <h4>Volunteer</h4>
+        <p>Join our tech/box office/usher teams — training provided.</p>
+        <a href="contact.html" class="btn small">Get involved</a>
+      </div>
+
+      <div class="card">
+        <h4>Artist Submissions</h4>
+        <p>Submit a short bio & sample work for consideration.</p>
+        <a href="contact.html#bio-form" class="btn small">Submit bio</a>
+      </div>
+
+      <div class="card">
+        <h4>Downloads</h4>
+        <p>Risk & Release, Photo Release and company forms.</p>
+        <a href="contact.html#downloads" class="btn small">Open downloads</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>Aurora Theatre Company</strong>
+        <p>Creative performances & community programs</p>
+      </div>
+      <div class="col">
+        <nav>
+          <a href="about.html">About</a>
+          <a href="productions.html">Productions</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="col">
+        <small>© <span id="year"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
