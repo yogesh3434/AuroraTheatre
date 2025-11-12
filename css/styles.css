@@ -71,9 +71,9 @@ body{
 .prod-card .poster-small{height: 130px; width: 280px;display:flex;}
 .prod-card .poster-small-img{height: 130px; width: 280px;display:flex;}
 .prod-card .poster-small-imgs{height: 130px; width: 280px;display:flex;}
-.prod-card .poster-small-1{height:120px;background:#1b1012; background: url(../images/echoes-image.JPG); border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-.prod-card .poster-small-2{height:120px;background:#1b1012;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
-.prod-card .poster-small-3{height:120px;background:#1b1012;border-radius:8px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.prod-card .poster-small-1{height:120px;background:#1b1012; background: url(../images/echoes-image.JPG); border-radius:8px;margin-bottom:10px;display:flex;align-items:left;justify-content:left;color:var(--muted)}
+.prod-card .poster-small-2{height:120px;border-radius:8px;margin-bottom:10px;display:flex;align-items:left;justify-content:left;color:var(--muted)}
+.prod-card .poster-small-3{height:120px;;border-radius:8px;margin-bottom:10px;display:flex;align-items:left;justify-content:left;color:var(--muted)}
 
 
 .form-card{padding:16px;border-radius:10px}
