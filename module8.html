@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Module 8 — Aurora Theatre</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M2 3h20v3H2zM6 9h2v12H6zM10 9h2v12h-2zM14 9h2v12h-2z"/>
+        </svg>
+        <span>Aurora Theatre</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="productions.html">Productions</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="module8.html" aria-current="page">Module 8</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="nav-toggle-2" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section-head">
+      <h1>Module 8: Data Collection Audit</h1>
+      <p>
+        This page documents a real-world account sign-in / registration interface and analyzes what data is collected,
+        how it may be used, and the ethical risks involved.
+      </p>
+    </section>
+
+    <section>
+      <h2>Direct URL to the sign-up / data-collection interface</h2>
+      <p>
+        <a href="https://www.ticketmaster.ca/member" target="_blank" rel="noopener">
+          https://www.ticketmaster.ca/member
+        </a>
+      </p>
+    </section>
+
+   
+    <section>
+      <h2>Screenshot of the data-collection page</h2>
+      <p>
+        <img
+          src="images/ticketmaster-signin.png"
+          alt="Ticketmaster sign-in / account creation interface (blank form screenshot)"
+          style="max-width: 100%; height: auto; border-radius: 12px;"
+        />
+      </p>
+      <p><em>Screenshot is of a blank/public-facing page and does not include any personal information.</em></p>
+    </section>
+
+    
+    <section>
+      <h2>System description</h2>
+      <p>
+        Ticketmaster is a digital ticketing platform that lets users browse events and purchase tickets online.
+        Users enter data when they sign in or begin account creation, which typically starts with an email address and may include phone verification in some flows.
+        The purpose of the sign-in/account step is to identify the user and connect purchases, ticket delivery, and order history to a single profile.
+        It also supports security features such as fraud prevention and account recovery.
+      </p>
+    </section>
+
+    
+    <section>
+      <h2>Data collected</h2>
+      <ul>
+        <li><strong>Visible form fields :</strong>
+          <ul>
+            <li>Email address</li>
+            <li>In some flows: phone number and/or one-time verification code</li>
+          </ul>
+        </li>
+
+        <li><strong>Inferred data:</strong>
+          <ul>
+            <li>IP address and approximate location</li>
+            <li>Device/browser details (e.g., OS, browser type)</li>
+            <li>Timestamps (account creation/sign-in time)</li>
+            <li>Security signals (e.g., failed attempts, session identifiers)</li>
+          </ul>
+        </li>
+
+        <li><strong>Behavioural data after sign-in:</strong>
+          <ul>
+            <li>Event searches, page views, and clicks</li>
+            <li>Time on page and session duration</li>
+            <li>Cart activity and purchase history</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    
+    <section>
+      <h2>Conceptual relational database sketch</h2>
+
+      <p>
+        <img
+          src="images/db-sketch.png"
+          alt="Conceptual database diagram showing users table related to orders and sessions by user_id"
+          style="max-width: 100%; height: auto; border-radius: 12px;"
+        />
+      </p>
+      <p>
+        <strong>Relationship note:</strong> The <code>users</code> table is the primary table.
+        Related tables such as <code>orders</code> and <code>sessions</code> store many records per user and connect back to
+        <code>users</code> via <code>user_id</code> (foreign key).
+      </p>
+
+    <section>
+      <h2>Ethical analysis</h2>
+      <p>
+        One ethical concern is <strong>privacy and data minimization</strong>: collecting phone numbers, device details, and extensive activity logs may exceed what is necessary for basic ticket purchases.
+        A second concern is <strong>informed consent</strong>: users may not clearly understand what behavioural tracking occurs after sign-in or how long the data is retained.
+        If this information were mishandled or breached, attackers could use exposed emails/phone numbers and activity patterns for phishing, scams, or account takeover attempts.
+        The overall risk increases if sensitive activity data is retained too long or shared with third parties without clear user control.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recommendations</h2>
+      <ol>
+        <li>Collect only essential fields during sign-up and clearly mark optional fields (like phone number) unless strictly required for security.</li>
+        <li>Shorten retention periods for detailed behavioural logs and provide clearer user controls for viewing/deleting stored data where feasible.</li>
+        <li>Improve transparency and security by using clearer consent language, limiting third-party trackers, and offering strong account protection such as two-factor authentication (2FA).</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>Aurora Theatre Company</strong>
+        <p>Creative performances & community programs</p>
+      </div>
+
+      <div class="col">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="productions.html">Productions</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="module8.html">Module 8</a>
+        </nav>
+      </div>
+
+      <div class="col">
+        <small>© <span id="year-2"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
