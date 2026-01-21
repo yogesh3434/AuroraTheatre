@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Database Project — Aurora Theatre</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M2 3h20v3H2zM6 9h2v12H6zM10 9h2v12h-2zM14 9h2v12h-2z"/>
+        </svg>
+        <span>Aurora Theatre</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="productions.html">Productions</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="module8.html">Module 8</a>
+        <a href="database-project.html" aria-current="page">Database Project</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="nav-toggle-2" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section-head">
+      <h1>Database Project</h1>
+      <p>
+        This project demonstrates importing CSV data into MySQL, defining relational
+        keys, and querying the database to determine when a specific customer is going
+        to the theatre.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tools Used</h2>
+      <ul>
+        <li>MySQL Workbench</li>
+        <li>MySQL Local Server</li>
+        <li>CSV Data Files</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Database Setup Steps</h2>
+      <ol>
+        <li>Download and install <strong>MySQL Workbench</strong>.</li>
+        <li>Connect to the local server (Local Instance 3306).</li>
+        <li>Create a new schema from the Schemas panel.</li>
+        <li>
+          Import CSV files using <strong>Table Data Import Wizard</strong>, ensuring
+          <em>Create new table</em> is selected.
+        </li>
+        <li>Repeat the import process for all CSV files.</li>
+      </ol>
+    </section>
+
+    <figure>
+      <img
+        src="images/Tables.png"
+        alt="MySQL Workbench showing customers, orders, and shows tables"
+        style="max-width: 100%; height: auto; border-radius: 12px;"
+      />
+      <figcaption>Tables view in MySQL Workbench</figcaption>
+    </figure>
+
+    <figure>
+      <img
+        src="images/erdiagram.png"
+        alt="MySQL Workbench showing customers, orders, and shows tables"
+        style="max-width: 100%; height: auto; border-radius: 12px;"
+      />
+      <figcaption>ER Diagram of database tables</figcaption>
+    </figure>
+
+    <section>
+      <h2>Primary & Foreign Keys</h2>
+      <ul>
+        <li><strong>Customers</strong>: UID (Primary Key)</li>
+        <li><strong>Orders</strong>: UID (Primary Key)</li>
+        <li><strong>Orders</strong>: PEOPLE_ID (Foreign Key → Customers)</li>
+        <li><strong>Orders</strong>: SHOW_ID (Foreign Key → Shows)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Query Objective</h2>
+      <p>
+        An SQL query using <strong>SELECT</strong> and <strong>JOIN</strong> statements
+        connects the Customers, Orders, and Shows tables.  
+        The query filters for <strong>Paul Tillberg</strong> and retrieves the date of
+        the theatre show he is attending.
+      </p>
+
+      <figure>
+        <img
+          src="images/Query.png"
+          alt="MySQL Workbench showing customers, orders, and shows tables"
+          style="max-width: 100%; height: auto; border-radius: 12px;"
+        />
+        <figcaption>SQL query for Paul Tillberg</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="images/queryresult.png"
+          alt="MySQL Workbench showing customers, orders, and shows tables"
+          style="max-width: 100%; height: auto; border-radius: 12px;"
+        />
+        <figcaption>Result of SQL query showing Paul's theatre date</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Project Files</h2>
+      <p>
+        All database files, SQL scripts, and supporting materials for this
+        project are available in the Google Drive folder linked below.
+      </p>
+
+      <p>
+        <a
+          href="https://drive.google.com/drive/folders/1k_9vhNx7P0hiPK_sDrpbwJAEm-qD2J5q?dmr=1&ec=wgc-drive-globalnav-goto"
+          target="_blank"
+          rel="noopener"
+        >
+          View Database Project Files on Google Drive
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>Aurora Theatre Company</strong>
+        <p>Creative performances & community programs</p>
+      </div>
+
+      <div class="col">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="productions.html">Productions</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="module8.html">Module 8</a>
+          <a href="database-project.html">Database Project</a>
+        </nav>
+      </div>
+
+      <div class="col">
+        <small>© <span id="year-2"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
