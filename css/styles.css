@@ -247,3 +247,13 @@ input[type=text], input[type=email], input[type=url], input[type=password], text
   #nav-toggle{display:inline-block}
   .main-nav{display:none}
 }
+
+.responsive-img {
+  width: 70%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+

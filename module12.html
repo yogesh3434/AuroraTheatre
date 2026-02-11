@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Module 12 — Image Analysis and AI Reflection</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="dark">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <svg width="40" height="40" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M2 3h20v3H2zM6 9h2v12H6zM10 9h2v12h-2zM14 9h2v12h-2z"/>
+        </svg>
+        <span>Aurora Theatre</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="productions.html">Productions</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="nav-toggle-2" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section-head">
+      <h1>Module 12</h1>
+    </section>
+
+    <!-- Original Image Section -->
+    <section>
+      <h2>Original Image</h2>
+      <img src="images/original.jpg" alt="Original Image" class="responsive-img">
+    </section>
+
+    <!-- Description Section -->
+    <section>
+      <h2>My Description</h2>
+      <p>
+        This image shows a girl sitting near a lake on a wooden pier. Girl is wearing a bright red dress and there are trees in the background with leaves falling along with the wind. You can see the reflection of some trees and background in the lake. 
+        This image has been altered in multiple ways. Girl's dress is very bright shade of red, so there have been lighting changes and overall, girl looks brighter than the background. Also, the whole background is little blurred and turned to black and white, whereas the girl is colourful.
+
+      </p>
+
+      <h2>AI Description</h2>
+      <p>
+       This striking image utilizes selective color to create a cinematic, melancholic atmosphere. A woman in a vibrant red dress sits on a wooden dock, her face tilted upward in a moment of serene contemplation. While she and a few stray autumn leaves glow with color, the surrounding forest and reflective lake are rendered in somber black and white. The air is thick with falling leaves frozen in mid-air, adding a sense of stillness to the scene. This artistic contrast isolates the subject, making her appear as a singular spark of life within a ghostly, silvered landscape.
+      </p>
+    </section>
+
+    <!-- Generated Images Section -->
+    <section>
+      <h2>Generated Image from My Description</h2>
+      <img src="images/mydesc.jpg" alt="Generated from My Description" class="responsive-img">
+
+      <h2>Generated Image from AI Description</h2>
+      <img src="images/AiGen.jpg" alt="Generated from AI Description" class="responsive-img">
+    </section>
+
+    <!-- Reflection Section -->
+    <section>
+      <h2>Reflection</h2>
+      <p>
+        Both images align in showing a woman in red dress isolated against a muted landscape. My description generated a straightforward image with dress color little matching with original image, whereas AI description created a more dramatic
+        and cinematic atmosphere with richer leaves, stronger fog and heightened emotion. Also, colour of the dress does not seem to match bright red colour of dress in original image. There are some similarities in original image and AI description image like girl is staring towards sky. This shows how different priorities shape perception and how meaning is constructed from the same scene. 
+
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <strong>Aurora Theatre Company</strong>
+        <p>Creative performances & community programs</p>
+      </div>
+
+      <div class="col">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="productions.html">Productions</a>
+          <a href="calendar.html">Calendar</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="col">
+        <small>© <span id="year-2"></span> Aurora Theatre</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
